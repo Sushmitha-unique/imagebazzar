@@ -1,7 +1,10 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import axios from "axios";
 const ImageSearch = ({setdisplay}) =>{
     const [term,setterm] = useState('');
+    useEffect(()=>{
+        callme()
+    },[])
      async function callme(){
         try{
        const response = await axios.get("https://api.unsplash.com/search/photos",
@@ -12,7 +15,7 @@ const ImageSearch = ({setdisplay}) =>{
 
             },
             params:{
-             query : term 
+             query : term || "random"
             }
         })
         console.log(response.data.results)
