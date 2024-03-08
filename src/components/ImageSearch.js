@@ -11,7 +11,7 @@ const ImageSearch = ({setdisplay}) =>{
         {
             headers:{
                 "Accept-Version":"v1",
-                "Authorization" :"Client-ID vbw3wefVkHqwtKrRjAp7NbyN9WGXAhnQS70Wu7VlKsg"
+                "Authorization" :`Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`
 
             },
             params:{
