@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
         {/* <ApiBasic/> */}
-        <ImageSearch setdisplay={setdisplay}/>
+        <ImageSearch setdisplay={setdisplay} display={display}/>
         <ImageDisplay display={display}/>
     </div>
   )
